@@ -1,0 +1,27 @@
+@import "../variable/color";
+
+/* stylelint-disable-next-line */
+.scroll(@color: @scroll-color) {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: transparent;
+    border-radius: 10px;
+    z-index: 999;
+  }
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: #fff;
+    border-radius: 10px;
+    background-color: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: @color;
+    border-radius: 10px;
+
+    &:hover {
+      background-color: @color;
+    }
+  }
+}

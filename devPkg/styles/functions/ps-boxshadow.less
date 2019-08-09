@@ -1,0 +1,17 @@
+/**
+ * @distance - 距离
+ * @angel - 角度
+ * @spread - 扩展
+ * @size - 大小
+ * @color - 颜色
+ * @inset - 是否为内阴影
+ */
+/* stylelint-disable-next-line */
+.ps-boxshadow(@distance, @angel, @spread, @size, @color, @inset: false) {
+  @h-shadow: @distance * cos(180deg - @angel);
+  @v-shadow: @distance * sin(180deg - @angel);
+  @s-spread: @spread * @size;
+  @s-blur: @size - @s-spread;
+
+  box-shadow+: if((@inset), @h-shadow @v-shadow @s-blur @s-spread @color inset, @h-shadow @v-shadow @s-blur @s-spread @color);
+}

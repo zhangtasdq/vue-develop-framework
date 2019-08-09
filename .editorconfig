@@ -1,0 +1,13 @@
+root = true
+
+[*]
+charset = utf-8
+indent_style = space
+indent_size = 4
+trim_trailing_whitespace = true
+
+[*.css]
+indent_size = 2
+
+[*.less]
+indent_size = 2
