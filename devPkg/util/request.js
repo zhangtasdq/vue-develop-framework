@@ -1,7 +1,6 @@
 import axios from "axios";
 
-import { REQUEST_TIMEOUT } from "../config/const.config";
-import { URL_PREFIX } from "../config/url.config";
+import { REQUEST_TIMEOUT, URL_PREFIX } from "../config/const.config";
 import { addUrlParam } from "./tool";
 
 
