@@ -8,14 +8,14 @@ import MainLayout from "./layout/MainLayout.vue";
 
 export default {
     components: {
-        "sc-blank-layout": BlankLayout,
-        "sc-main-layout": MainLayout
+        "sb-blank-layout": BlankLayout,
+        "sb-main-layout": MainLayout
     },
 
     props: {
         layout: {
             type: String,
-            default: "sc-main-layout"
+            default: "sb-main-layout"
         }
     }
 };

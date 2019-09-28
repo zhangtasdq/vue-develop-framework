@@ -6,6 +6,7 @@ const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const ImageminPlugin = require("imagemin-webpack-plugin").default;
+const CopyPlugin = require("copy-webpack-plugin");
 
 const baseConfig = require("./webpack-base-config");
 const { resolvePath } = require("./helper");
@@ -80,14 +81,18 @@ let config = merge(baseConfig, {
 
         new CleanWebpackPlugin(["dist"], {
             root: resolvePath(".")
-        })
+        }),
+
+        new CopyPlugin([
+            { from: resolvePath("devPkg/lib"), to: resolvePath("dist") }
+        ])
     ]
 });
 
 config.plugins.unshift(new HtmlWebpackPlugin({
     template: resolvePath("index-template.html"),
     filename: resolvePath("dist/index.html"),
-    favicon: resolvePath("devPkg/images/favicon.ico"),
+    favicon: resolvePath("devPkg/images/favicon.png"),
     minify: {
         minifyCSS: true,
         removeComments: true,

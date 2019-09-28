@@ -40,11 +40,37 @@ function cloneData(data) {
     return JSON.parse(JSON.stringify(data));
 }
 
+const Tree = {
+    _forEachTreeItem(data, childKey = "children", callback, parent) {
+        callback(data, parent);
+
+        let child = data[childKey];
+
+        if (child && child.length > 0) {
+            for (let i = 0, j = child.length; i < j; ++i) {
+                this._forEachTreeItem(child[i], childKey, callback, data);
+            }
+        }
+    },
+
+    forEachTree(data, callback, childKey = "children") {
+        this._forEachTreeItem(data, childKey, callback);
+        return data;
+    },
+
+    forEachArrayTree(datas, callback, childKey = "children") {
+        for (let i = 0, j = datas.length; i < j; ++i) {
+            this.forEachTree(datas[i], callback, childKey);
+        }
+    }
+};
+
 export {
     isEmpty,
     isString,
     isArray,
     generateSimpleId,
     addUrlParam,
-    cloneData
+    cloneData,
+    Tree
 };

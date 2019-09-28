@@ -1,0 +1,16 @@
+{
+  "id": "1439546",
+  "name": "rulai",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "592835",
+      "name": "baidu",
+      "font_class": "baidu",
+      "unicode": "e650",
+      "unicode_decimal": 58960
+    }
+  ]
+}

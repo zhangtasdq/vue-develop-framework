@@ -1,0 +1,54 @@
+@import "theme-template";
+@import "../functions/scroll";
+
+.main-layout--dark {
+  @main-layout-header-bg: #0b1431;
+  @main-layout-header-input-bg: #68758d;
+  @main-layout-header-input-placeholder-color: #b3c2de;
+  @main-layout-header-input-icon-color: #b3c2de;
+
+  @main-layout-main-menu-bg: #3d4760;
+  @main-layout-main-menu-hover-color: #4d5972;
+  @main-layout-main-menu-active-bg-color: #4d5972;
+  @main-layout-main-menu-text-color: #c9ced9;
+  @main-layout-main-menu-active-text-color: #c9ced9;
+  @main-layout-main-menu-scrollbar-color: #30384b;
+  @main-layout-main-menu-icon-color: #707e9f;
+  @main-layout-main-menu-icon-active-color: #70acfb;
+  @main-layout-main-menu-shadow-color: #323b50;
+  @main-layout-main-menu-border-color: #455069;
+  @main-layout-main-menu-text-size: 16px;
+
+  @main-layout-header-tab-bg: #f4f6f8;
+  @main-layout-header-tab-text-color: #b3bbc9;
+  @main-layout-header-tab-text-active-color: #3c4a64;
+  @main-layout-header-tab-hover-bg: #3d4760;
+  @main-layout-header-tab-hover-text-color: #dce3f0;
+  @main-layout-header-aside-icon-color: #b1bccf;
+
+  @main-layout-content-bg: #f4f6f8;
+
+  @main-layout-sub-menu-bg: #3d4760;
+  @main-layout-sub-menu-title-color: #f2f4f9;
+  @main-layout-sub-menu-text-color: #c9cedc;
+  @main-layout-sub-menu-hover-bg: #4d5972;
+  @main-layout-sub-menu-active-bg: #4d5972;
+  @main-layout-sub-menu-border-color: #455069;
+  @main-layout-sub-menu-children-bg: #3d4760;
+  @main-layout-sub-menu-scrollbar-color: #30384b;
+  @main-layout-sub-menu-text-size: 14px;
+
+  @main-layout-footer-text-color: #7f868c;
+
+  @main-layout-fold-bg-color: #3d4760;
+
+  .theme-template();
+
+  .main-layout__main-menu {
+    .scroll(@main-layout-main-menu-scrollbar-color);
+  }
+
+  .main-layout__sub-menu {
+    .scroll(@main-layout-sub-menu-scrollbar-color);
+  }
+}

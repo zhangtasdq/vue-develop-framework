@@ -1,0 +1,39 @@
+.theme-template() {
+  //---
+  .main-layout__main-menu-wrapper {
+    background-color: @main-layout-main-menu-bg;
+    box-shadow: 2px 0 2px 0 @main-layout-main-menu-shadow-color;
+  }
+
+  .main-layout__main-menu .el-submenu .iconfont {
+    color: @main-layout-header-bg;
+  }
+
+  .main-layout__tabs > .el-tabs__header{
+    background-color: @main-layout-header-bg;
+  }
+
+  .main-layout__tabs > .el-tabs__header .el-tabs__item{
+    color: @main-layout-header-tab-text-color;
+  }
+
+  .main-layout__tabs > .el-tabs__header .el-tabs__item:hover {
+    background-color: @main-layout-header-tab-hover-bg;
+    color: @main-layout-header-tab-hover-text-color;
+  }
+
+  .main-layout__tabs > .el-tabs__header .el-tabs__item.is-active {
+    background-color: @main-layout-header-tab-bg;
+    color: @main-layout-header-tab-text-active-color;
+  }
+
+  .main-layout__tabs > .el-tabs__content > .el-tab-pane {
+    background-color: @main-layout-content-bg;
+  }
+
+  .main-layout__footer {
+    background-color: @main-layout-content-bg;
+    color: @main-layout-footer-text-color;
+  }
+  //---
+}

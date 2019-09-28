@@ -61,6 +61,7 @@ let config = merge(baseConfig, {
         open: openBrowser,
         useLocalIp: true,
         port: 3010,
+        contentBase: resolvePath("devPkg/lib"),
         proxy: {
         }
     }
@@ -69,7 +70,7 @@ let config = merge(baseConfig, {
 config.plugins.unshift(new HtmlWebpackPlugin({
     template: resolvePath("index-template.html"),
     filename: resolvePath("dist/index.html"),
-    favicon: resolvePath("devPkg/images/favicon.ico"),
+    favicon: resolvePath("devPkg/images/favicon.png"),
 }));
 config.plugins.unshift(new webpack.HotModuleReplacementPlugin());
 config.plugins.push(new webpack.DefinePlugin({

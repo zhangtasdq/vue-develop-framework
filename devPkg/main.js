@@ -5,9 +5,10 @@ import VueExtend from "./vue-extend";
 import router from "./router";
 import Index from "./pages/Index.vue";
 import "./styles/main.less";
+import TabView from "./tab-views";
 
 Vue.use(VueExtend);
-
+Vue.use(TabView);
 
 new Vue({
     el: "#mainContent",
