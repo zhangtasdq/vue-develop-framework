@@ -1,0 +1,45 @@
+@import "../../variable/color";
+@import "../../variable/size";
+
+@input-focus-border-color: #409eff;
+
+.sb-input {
+  .el-input__inner {
+    height: @form-editor-height;
+    line-height: @form-editor-height;
+    border-color: @border-color;
+    border-radius: 0;
+    font-size: 12px;
+
+    &:focus {
+      border-color: @input-focus-border-color;
+    }
+  }
+
+  &.el-input-group--append {
+    .el-input-group__append {
+      background-color: transparent;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      border-color: @border-color;
+    }
+  }
+
+  &.el-input--small {
+    .el-input__inner {
+      height: @form-editor-small-height;
+      line-height: @form-editor-small-height;
+    }
+
+    .el-input-group__append {
+      padding: 0 6px;
+    }
+  }
+
+  &.el-input--mini {
+    .el-input__inner {
+      height: @form-editor-mini-height;
+      line-height: @form-editor-mini-height;
+    }
+  }
+}

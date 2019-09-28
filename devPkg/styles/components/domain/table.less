@@ -1,0 +1,52 @@
+@table-report-border-color: #dce0e4;
+@table-report-body-text-color: #73777d;
+@table-report-operate-icon-color: #6eb0f9;
+
+@table-dialog-border-color: #dde1e7;
+@table-dialog-body-text-color: #606265;
+@table-dialog-operate-icon-color: #9099a2;
+
+@table-type: report, dialog;
+
+each(@table-type, {
+  @border-color: "table-@{value}-border-color";
+  @body-text-color: "table-@{value}-body-text-color";
+  @operate-icon-color: "table-@{value}-operate-icon-color";
+
+  .sb-table--@{value} {
+    border-color: @@border-color;
+
+    td,
+    th.is-leaf {
+      border-bottom-color: @@border-color;
+    }
+
+    .el-table__body {
+      td {
+        color: @@body-text-color;
+      }
+    }
+
+    .sb-table__icon--operate {
+      color: @@operate-icon-color;
+    }
+  }
+});
+
+.sb-table--report {
+  .sb-table__pagination-prefix,
+  .sb-table__pagination-suffix {
+    .el-button {
+      padding-top: 8px;
+      padding-bottom: 8px;
+    }
+  }
+
+  .sb-table__pagination-prefix {
+    margin: 7px 0 0 10px;
+  }
+
+  .sb-table__pagination-suffix {
+    margin: 7px 10px 0 0;
+  }
+}

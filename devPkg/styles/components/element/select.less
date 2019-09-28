@@ -1,0 +1,52 @@
+@import "../../variable/size";
+@import "../../variable/color";
+@import "../../functions/text-overflow-ellipsis";
+
+.sb-select {
+  .el-input {
+    &.is-focus {
+      .el-input__inner {
+        border-color: @primary-color;
+      }
+
+      .el-input__suffix {
+        border-left-color: @primary-color;
+      }
+    }
+  }
+
+  .el-input__inner {
+    border-color: @border-color;
+
+    &:focus {
+      border-color: @primary-color;
+    }
+  }
+
+  .el-input__suffix {
+    border-left: 1px solid @border-color;
+  }
+
+
+  &.el-select--small {
+    .el-input__inner {
+      height: @form-editor-small-height;
+      line-height: @form-editor-small-height;
+      border-radius: 0;
+    }
+  }
+}
+
+.el-select-dropdown {
+  .el-select-dropdown__item {
+    &.selected {
+      color: @primary-color;
+    }
+  }
+}
+
+.sb-select--collapse-tag {
+  .el-tag {
+    .text-overflow-ellipsis();
+  }
+}
