@@ -61,6 +61,7 @@ let config = merge(baseConfig, {
         open: openBrowser,
         useLocalIp: true,
         port: 3010,
+        contentBase: resolvePath("devPkg/lib"),
         proxy: {
         }
     }
