@@ -92,7 +92,7 @@ let config = merge(baseConfig, {
 config.plugins.unshift(new HtmlWebpackPlugin({
     template: resolvePath("index-template.html"),
     filename: resolvePath("dist/index.html"),
-    favicon: resolvePath("devPkg/images/favicon.png"),
+    favicon: resolvePath("devPkg/images/favicon.ico"),
     minify: {
         minifyCSS: true,
         removeComments: true,
